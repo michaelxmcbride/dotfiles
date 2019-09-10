@@ -35,6 +35,18 @@ def _initialize():
         print("Unable to import readline dependencies.")
 
 
+def clear():
+    """
+    Clear the screen.
+    """
+    import os
+
+    if os.name == "nt":
+        _ = os.system("cls")
+    else:
+        _ = os.system("clear")
+
+
 if __name__ == "__main__":
     _initialize()
     del _initialize
