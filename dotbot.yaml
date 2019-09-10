@@ -1,0 +1,54 @@
+# Configuration for Dotbot (https://git.io/dotbot).
+
+# Common default properties.
+- defaults:
+    link:
+      create: true
+      relink: true
+
+# Common directories to clean.
+- clean:
+  - "~"
+  - ~/.config
+
+# Common directories and files to symbolically link.
+- link:
+    ~/.config/aws/config: config/aws/config
+    ~/.config/gem: config/gem
+    ~/.config/git: config/git
+    ~/.config/git/config.d/user/current: config/git/config.d/user/personal
+    ~/.config/python: config/python
+    ~/.config/vim: config/vim
+    ~/.config/zsh: config/zsh
+    ~/.editorconfig: config/editorconfig/editorconfig
+    ~/.zshrc: config/zsh/zshrc
+
+# Common shell commands to run.
+- shell:
+  - mkdir -p ~/.cache/antigen
+  - mkdir -p ~/.local/share/vim
+  - mkdir -p ~/.local/share/z
+  - mkdir -p ~/.local/share/zsh
+
+# Linux-specific default properties.
+- defaults:
+    link:
+      create: true
+      if: test "$(uname)" = "Linux"
+      relink: true
+
+# Linux-specific directories and files to symbolically link.
+- link:
+    ~/.config/Hyper/.hyper.js: config/hyper/hyper.js
+
+# macOS-specific default properties.
+- defaults:
+    link:
+      create: true
+      if: test "$(uname)" = "Darwin"
+      relink: true
+
+# macOS-specific directories and files to symbolically link.
+- link:
+    ~/.config/git/config.d/os/current: config/git/config.d/os/macos
+    ~/.hyper.js: config/hyper/hyper.js
