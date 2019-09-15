@@ -21,6 +21,7 @@
     ~/.config/vim: config/vim
     ~/.config/zsh: config/zsh
     ~/.editorconfig: config/editorconfig/editorconfig
+    ~/.zshenv: config/zsh/zshenv
     ~/.zshrc: config/zsh/zshrc
 
 # Common shell commands to run.
