@@ -1,3 +1,9 @@
+[user]
+    name = Michael McBride
+
+    # Do not attempt to guess the user's name and email address.
+    useConfigOnly = true
+
 [include]
     path = config.d/os/current
     path = config.d/user/current
