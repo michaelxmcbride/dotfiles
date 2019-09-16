@@ -1,0 +1,4 @@
+#!/usr/bin/env zsh
+
+launchctl setenv "DOCKER_CONFIG" "$DOCKER_CONFIG"
+launchctl setenv "MACHINE_STORAGE_PATH" "$MACHINE_STORAGE_PATH"
