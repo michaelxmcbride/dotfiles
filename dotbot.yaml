@@ -29,6 +29,8 @@
 # Common shell commands to run.
 - shell:
   - mkdir -p ~/.cache/antigen
+  - mkdir -p ~/.cache/vim/backup
+  - mkdir -p ~/.cache/vim/swap
   - mkdir -p ~/.local/share/vim
   - mkdir -p ~/.local/share/z
   - mkdir -p ~/.local/share/zsh
