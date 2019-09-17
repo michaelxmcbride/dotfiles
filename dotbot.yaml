@@ -11,6 +11,7 @@
   - "~"
   - ~/.config
   - ~/.local/bin
+  - ~/Library/LaunchAgents
 
 # Common directories and files to symbolically link.
 - link:
