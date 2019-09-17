@@ -3,7 +3,7 @@
 <plist version="1.0">
     <dict>
         <key>Label</key>
-        <string>launchd-env-setup</string>
+        <string>LaunchEnvironment</string>
         <key>ProgramArguments</key>
         <array>
             <string>zsh</string>

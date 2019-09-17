@@ -56,4 +56,4 @@
     ~/.config/git/config.d/os/current: config/git/config.d/os/macos
     ~/.hyper.js: config/hyper/hyper.js
     ~/.local/bin/launchenv: bin/launchenv
-    ~/Library/LaunchAgents/launchd-env-setup.plist: config/macos/launch-agents/launchd-env-setup.plist
+    ~/Library/LaunchAgents/LaunchEnvironment.plist: config/macos/launch-agents/LaunchEnvironment.plist
