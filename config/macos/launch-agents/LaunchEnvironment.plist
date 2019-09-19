@@ -6,9 +6,9 @@
         <string>LaunchEnvironment</string>
         <key>ProgramArguments</key>
         <array>
-            <string>zsh</string>
+            <string>bash</string>
             <string>-c</string>
-            <string>launchenv</string>
+            <string>${HOME}/.local/bin/launchenv set</string>
         </array>
         <key>RunAtLoad</key>
         <true/>

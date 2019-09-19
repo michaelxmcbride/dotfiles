@@ -1,4 +1,72 @@
 #!/usr/bin/env zsh
+#
+# Manage launchd environment variables.
+#
 
-launchctl setenv "DOCKER_CONFIG" "$DOCKER_CONFIG"
-launchctl setenv "MACHINE_STORAGE_PATH" "$MACHINE_STORAGE_PATH"
+
+# The entry point of the script.
+main() {
+    # Declare local variables for the function.
+    local export_command
+    local file_path
+    local file_paths
+    local variable_name
+    local variable_value
+
+    case "$1" in
+        # Either 'list' or 'set' was given as the first positional argument to
+        # the function.
+        list|set)
+            # Get the paths of the files to search for environment variable
+            # declarations.
+            file_paths=("${HOME}/.zshenv")
+            file_paths+="$(find "${XDG_CONFIG_HOME}/zsh/zshenv.d" -name "*.zsh")"
+
+            # Loop through all file paths.
+            for file_path in $file_paths; do
+                # Ensure the file exists and is readable.
+                if test -r "$file_path"; then
+                    # Find all environment variable delarations in the file and
+                    # parse out their components (i.e. export command, variable
+                    # name, variable value).
+                    grep "^export" "$file_path" | while IFS=' =' read export_command variable_name variable_value; do
+                        # Get the value of the environment variable.
+                        variable_value="$(eval "echo \$$variable_name")"
+
+                        case "$1" in
+                            # Print the environment variable name and value if
+                            # 'list' was given as the first positional argument
+                            # to the function.
+                            list)
+                                echo "${variable_name}=${variable_value}"
+                                ;;
+                            # Set the environment variable for launchd if 'set'
+                            # was given as the first positional argument to the
+                            # function.
+                            set)
+                                launchctl setenv "$variable_name" "$variable_value"
+                        esac
+                    done
+                fi
+            done
+            ;;
+
+        # Print a help message and exit with an error code if neither 'list' nor
+        # 'set' was given as the first positional argument to the function.
+        *)
+            echo "Usage: launchenv COMMAND"
+            echo ""
+            echo "Commands:"
+            echo "  list  List the available launchd environment variables."
+            echo "  set   Set the available launchd environment variables."
+            exit 1
+            ;;
+    esac
+}
+
+
+# Invoke the script's entry point function.
+main $@
+
+# Remove the script's entry point function.
+unset -f main

@@ -44,7 +44,7 @@
 
 # Linux-specific directories and files to symbolically link.
 - link:
-    ~/.config/Hyper/.hyper.js: config/hyper/hyper.js
+    ~/.config/hyper/.hyper.js: config/hyper/hyper.js
 
 # macOS-specific default properties.
 - defaults:
@@ -56,6 +56,6 @@
 # macOS-specific directories and files to symbolically link.
 - link:
     ~/.config/git/config.d/os/current: config/git/config.d/os/macos
-    ~/.hyper.js: config/hyper/hyper.js
+    ~/.config/hyper/.hyper.js: config/hyper/hyper.js
     ~/.local/bin/launchenv: bin/launchenv
     ~/Library/LaunchAgents/LaunchEnvironment.plist: config/macos/launch-agents/LaunchEnvironment.plist
