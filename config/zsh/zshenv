@@ -6,7 +6,6 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_LIB_HOME="${HOME}/.local/lib"
-export PATH="${XDG_BIN_HOME}:${PATH}"
 
 # Source Zsh configuration files.
 for _dir in "${XDG_CONFIG_HOME}/zsh/zshenv.d/"{before,.,after}; do
