@@ -26,14 +26,14 @@
     ~/.editorconfig: config/editorconfig/editorconfig
     ~/.zshenv: config/zsh/zshenv
 
-# Common shell commands to run.
-- shell:
-  - mkdir -p ~/.cache/antigen
-  - mkdir -p ~/.cache/vim/backup
-  - mkdir -p ~/.cache/vim/swap
-  - mkdir -p ~/.local/share/vim
-  - mkdir -p ~/.local/share/z
-  - mkdir -p ~/.local/share/zsh
+# Common directories to create.
+- create:
+  - ~/.cache/antigen
+  - ~/.cache/vim/backup
+  - ~/.cache/vim/swap
+  - ~/.local/share/vim
+  - ~/.local/share/z
+  - ~/.local/share/zsh
 
 # Linux-specific default properties.
 - defaults:
