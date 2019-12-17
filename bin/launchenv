@@ -20,7 +20,7 @@ main() {
             # Get the paths of the files to search for environment variable
             # declarations.
             file_paths=("${HOME}/.zshenv")
-            file_paths+=($(find "${XDG_CONFIG_HOME}/zsh/zshenv.d" -name "*.zsh"))
+            file_paths+=($(find -L "${XDG_CONFIG_HOME}/zsh/zshenv.d" -name "*.zsh" -type "f"))
 
             # Loop through all file paths.
             for file_path in $file_paths; do
