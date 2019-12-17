@@ -1,2 +1,3 @@
 *.zwc
 /config/git/config.d/*/current
+/config/zsh/zshenv.d/nationwide*
