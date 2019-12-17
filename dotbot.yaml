@@ -22,8 +22,9 @@
     ~/.config/python: config/python
     ~/.config/vim: config/vim
     ~/.config/zsh: config/zsh
-    ~/.local/share/zsh/.zshrc: config/zsh/zshrc
     ~/.editorconfig: config/editorconfig/editorconfig
+    ~/.local/share/zsh/.zshenv: config/zsh/zshenv
+    ~/.local/share/zsh/.zshrc: config/zsh/zshrc
     ~/.zshenv: config/zsh/zshenv
 
 # Common directories to create.
