@@ -32,6 +32,7 @@
   - ~/.cache/antigen
   - ~/.cache/vim/backup
   - ~/.cache/vim/swap
+  - ~/.config/saml2aws
   - ~/.local/share/vim
   - ~/.local/share/z
   - ~/.local/share/zsh
