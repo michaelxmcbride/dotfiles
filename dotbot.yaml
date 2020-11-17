@@ -1,6 +1,6 @@
 # Configuration for Dotbot (https://git.io/dotbot).
 
-# Common default properties.
+# Common default options for directives.
 - defaults:
     link:
       create: true
@@ -8,10 +8,12 @@
 
 # Common directories to clean.
 - clean:
-  - "~"
-  - ~/.config
-  - ~/.local/bin
-  - ~/Library/LaunchAgents
+    ~/: {}
+    ~/.config:
+      recursive: true
+    ~/.local/bin: {}
+    ~/.local/share/zsh: {}
+    ~/Library/LaunchAgents: {}
 
 # Common directories and files to symbolically link.
 - link:
@@ -38,7 +40,7 @@
   - ~/.local/share/z
   - ~/.local/share/zsh
 
-# Linux-specific default properties.
+# Linux-specific default options for directives.
 - defaults:
     link:
       create: true
@@ -49,7 +51,7 @@
 - link:
     ~/.config/hyper/.hyper.js: config/hyper/hyper.js
 
-# macOS-specific default properties.
+# macOS-specific default options for directives.
 - defaults:
     link:
       create: true
