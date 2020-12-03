@@ -8,6 +8,7 @@ antigen use oh-my-zsh
 
 # Install and load the following Zsh plugins.
 antigen bundles <<EOBUNDLES
+    rupa/z@v1.*
     michaelxmcbride/zsh-dircycle
     mafredri/zsh-async
     sindresorhus/pure
