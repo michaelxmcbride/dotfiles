@@ -1,15 +1,12 @@
-# Set the path to the Antigen library.
-if test "$(uname)" = "Darwin"; then
-    _antigen_lib="/usr/local/share/antigen/antigen.zsh"
+# Initialize Antigen if installed via Homebrew.
+if brew list --versions "antigen" &> /dev/null; then
+    source "$(brew --prefix)/share/antigen/antigen.zsh"
 fi
 
-# Load the Antigen library.
-source "$_antigen_lib"
-
-# Load the Oh My Zsh library.
+# Install and load the Oh My Zsh library.
 antigen use oh-my-zsh
 
-# Specify the Zsh plugins to load.
+# Install and load the following Zsh plugins.
 antigen bundles <<EOBUNDLES
     michaelxmcbride/zsh-dircycle
     mafredri/zsh-async
@@ -20,8 +17,5 @@ antigen bundles <<EOBUNDLES
     zsh-users/zsh-history-substring-search
 EOBUNDLES
 
-# Load the specified Zsh plugins.
+# Load all bundle completions.
 antigen apply
-
-# Clean up unneeded variables.
-unset _antigen_lib
