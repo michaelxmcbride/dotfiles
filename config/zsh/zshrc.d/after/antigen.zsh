@@ -3,11 +3,6 @@ if test "$(uname)" = "Darwin"; then
     _antigen_lib="/usr/local/share/antigen/antigen.zsh"
 fi
 
-# Customize Antigen storage locations.
-export ADOTDIR="${XDG_DATA_HOME}/antigen"
-export ANTIGEN_CACHE="${XDG_CACHE_HOME}/antigen/init.zsh"
-export ANTIGEN_COMPDUMP="${XDG_CACHE_HOME}/antigen/zcompdump"
-
 # Load the Antigen library.
 source "$_antigen_lib"
 
