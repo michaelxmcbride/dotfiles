@@ -1,8 +1,8 @@
-# Environment variables for minikube.
+# Zsh environment configuration for minikube.
 #
 # Links:
-# - https://minikube.sigs.k8s.io/docs/reference/environment_variables/
+# - https://minikube.sigs.k8s.io/
+# - https://minikube.sigs.k8s.io/docs/handbook/config/#environment-variables
 
-# Set the location of the .minikube directory used for state and configuration
-# data.
-export MINIKUBE_HOME="${XDG_DATA_HOME}"
+# The location of the .minikube directory used for state and configuration data.
+export MINIKUBE_HOME="${XDG_DATA_HOME}/minikube"
